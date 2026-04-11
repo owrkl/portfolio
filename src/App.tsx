@@ -55,11 +55,11 @@ function App() {
       </div>
       <div className='flex'>
         <BubbleMenu
-          logo={<span style={{ fontSize: "14px", fontWeight: 700, color: "#ffffff" }}>Adnan Roomieh</span>}
+          logo={<span style={{ fontSize: "14px", fontWeight: 700, color: "#101010" }}>Adnan Roomieh</span>}
           items={items}
           menuAriaLabel="Toggle navigation"
-          menuBg="#101010"
-          menuContentColor="#ffffff"
+          menuBg="#cdcdcd"
+          menuContentColor="#101010"
           useFixedPosition={false}
           animationEase="back.out(1.5)"
           animationDuration={0.5}
