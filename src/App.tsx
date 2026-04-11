@@ -1,7 +1,7 @@
 import './App.css'
 import Silk from '@/components/Silk'
-import BubbleMenu from './components/BubbleMenu'
-
+import BubbleMenu from '@/components/BubbleMenu'
+import TextType from '@/components/TextType';
 const items = [
   {
     label: 'home',
@@ -43,7 +43,7 @@ const items = [
 function App() {
   return (
     <>
-      <div className="absolute w-full h-screen overflow-hidde backdrop-blur-3xl">
+      <div className="absolute w-full h-screen overflow-hidden backdrop-blur-3xl">
         <Silk
           speed={5}
           scale={1}
@@ -53,7 +53,19 @@ function App() {
         />
         <div className="absolute inset-0 backdrop-blur-lg bg-black/20 z-5" />
       </div>
-      <div className='flex'>
+      <div className='absolute w-full flex flex-col py-25 justify-center text-center'>
+        {/* <strong className='text-white relative z-20 text-[45px]'>Full-stack developer | AI power-user | Linux enthusiast</strong> */}
+        <TextType
+          text={["Full-stack developer", "AI power-user", "Linux enthusiast"]}
+          typingSpeed={75}
+          pauseDuration={1500}
+          showCursor
+          cursorCharacter="▎"
+          cursorBlinkDuration={0.5}
+          className='text-[50px]'
+        />
+      </div>
+      <div className='absolute flex flex-col gap-4 w-full z-90'>
         <BubbleMenu
           logo={<span style={{ fontSize: "14px", fontWeight: 700, color: "#101010" }}>Adnan Roomieh</span>}
           items={items}
@@ -65,7 +77,6 @@ function App() {
           animationDuration={0.5}
           staggerDelay={0.12}
         />
-        <strong className='text-white'>My Portfolio</strong>
       </div>
     </>
   )
