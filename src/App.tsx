@@ -2,6 +2,8 @@ import './App.css'
 import Silk from '@/components/Silk'
 import BubbleMenu from '@/components/BubbleMenu'
 import TextType from '@/components/TextType';
+import Carousel from '@/components/Carousel'
+
 const items = [
   {
     label: 'home',
@@ -43,7 +45,7 @@ const items = [
 function App() {
   return (
     <>
-      <div className="absolute w-full h-screen overflow-hidden backdrop-blur-3xl">
+      <div className="fixed w-full h-screen overflow-hidden backdrop-blur-3xl">
         <Silk
           speed={5}
           scale={1}
@@ -54,7 +56,6 @@ function App() {
         <div className="absolute inset-0 backdrop-blur-lg bg-black/20 z-5" />
       </div>
       <div className='absolute w-full flex flex-col py-25 justify-center text-center'>
-        {/* <strong className='text-white relative z-20 text-[45px]'>Full-stack developer | AI power-user | Linux enthusiast</strong> */}
         <TextType
           text={["Full-stack developer", "AI power-user", "Linux enthusiast"]}
           typingSpeed={75}
@@ -64,6 +65,16 @@ function App() {
           cursorBlinkDuration={0.5}
           className='text-[50px]'
         />
+        <div className='flex items-center justify-center'>
+          <Carousel
+            baseWidth={700}
+            autoplay={false}
+            autoplayDelay={3000}
+            pauseOnHover={false}
+            loop={true}
+            round={false}
+          />
+        </div>
       </div>
       <div className='absolute flex flex-col gap-4 w-full z-90'>
         <BubbleMenu
