@@ -83,7 +83,7 @@ function App() {
           menuAriaLabel="Toggle navigation"
           menuBg="#cdcdcd"
           menuContentColor="#101010"
-          useFixedPosition={false}
+          useFixedPosition={true}
           animationEase="back.out(1.5)"
           animationDuration={0.5}
           staggerDelay={0.12}

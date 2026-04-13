@@ -61,7 +61,7 @@ function CarouselItem({ item, index, itemWidth, round, trackItemOffset, x, trans
       key={`${item?.id ?? index}-${index}`}
       className={`relative shrink-0 flex flex-col ${round
         ? 'items-center justify-center text-center bg-[#060010] border-0'
-        : 'items-start justify-between bg-[#222] border border-[#222] rounded-[12px]'
+        : 'items-start justify-between bg-[#cdcdcd]/80 border border-[#cdcdcd]/80 rounded-[12px]'
         } overflow-hidden cursor-grab active:cursor-grabbing`}
       style={{
         width: itemWidth,
@@ -77,8 +77,8 @@ function CarouselItem({ item, index, itemWidth, round, trackItemOffset, x, trans
         </span>
       </div>
       <div className="p-5 -mt-5">
-        <div className="mb-1 font-black text-lg text-white text-left text-[38px]">{item.title}</div>
-        <p className="text-sm text-white">{item.description}</p>
+        <div className="mb-1 font-black text-lg text-black text-left text-[38px]">{item.title}</div>
+        <p className="text-sm text-black">{item.description}</p>
       </div>
     </motion.div>
   );
@@ -219,7 +219,7 @@ export default function Carousel({
   return (
     <div
       ref={containerRef}
-      className={`relative overflow-hidden p-4 ${round ? 'rounded-full border border-white' : 'rounded-[24px] border border-[#222]'
+      className={`relative overflow-hidden p-4 ${round ? 'rounded-full border border-white' : 'rounded-[24px] border border-[#cdcdcd]'
         }`}
       style={{
         width: `${baseWidth}px`,
@@ -263,11 +263,11 @@ export default function Carousel({
               key={index}
               className={`h-2 w-2 rounded-full cursor-pointer transition-colors duration-150 ${activeIndex === index
                 ? round
-                  ? 'bg-white'
-                  : 'bg-[#333333]'
+                  ? 'bg-white/80 shadow-[0_0_8px_rgba(255,255,255,0.8)]'
+                  : 'bg-white/80 shadow-[0_0_8px_rgba(255,255,255,0.8)]'
                 : round
-                  ? 'bg-[#555]'
-                  : 'bg-[rgba(51,51,51,0.4)]'
+                  ? 'bg-white/20'
+                  : 'bg-white/20'
                 }`}
               animate={{
                 scale: activeIndex === index ? 1.2 : 1
