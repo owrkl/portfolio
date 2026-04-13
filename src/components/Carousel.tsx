@@ -90,12 +90,12 @@ function CarouselItem({ item, index, itemWidth, round, trackItemOffset, x, trans
       transition={transition}
     >
       <div className={`${round ? 'p-0 m-0' : 'mb-4 p-5'}`}>
-        <span className="flex h-[28px] w-[28px] items-center justify-center rounded-full bg-[#060010]">
+        <span className="flex h-[28px] w-[28px] items-center justify-center rounded-full bg-[#060010] -mb-1.5">
           {item.icon}
         </span>
       </div>
-      <div className="p-5">
-        <div className="mb-1 font-black text-lg text-white">{item.title}</div>
+      <div className="p-5 -mt-5">
+        <div className="mb-1 font-black text-lg text-white text-left text-[38px]">{item.title}</div>
         <p className="text-sm text-white">{item.description}</p>
       </div>
     </motion.div>
