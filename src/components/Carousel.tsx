@@ -34,24 +34,6 @@ const DEFAULT_ITEMS: CarouselItem[] = [
     id: 2,
     icon: <FiClock className="h-[16px] w-[16px] text-white" />
   }
-  /* {
-    title: 'Components',
-    description: 'Reusable components for your projects.',
-    id: 3,
-    icon: <FiLayers className="h-[16px] w-[16px] text-white" />
-  },
-  {
-    title: 'Backgrounds',
-    description: 'Beautiful backgrounds and patterns for your projects.',
-    id: 4,
-    icon: <FiLayout className="h-[16px] w-[16px] text-white" />
-  },
-  {
-    title: 'Common UI',
-    description: 'Common UI components are coming soon!',
-    id: 5,
-    icon: <FiCode className="h-[16px] w-[16px] text-white" />
-  } */
 ];
 
 const DRAG_BUFFER = 0;
@@ -275,7 +257,7 @@ export default function Carousel({
         ))}
       </motion.div>
       <div className={`flex w-full justify-center ${round ? 'absolute z-20 bottom-12 left-1/2 -translate-x-1/2' : ''}`}>
-        <div className="mt-4 flex w-[150px] justify-between px-8">
+        <div className="mt-4 flex justify-center gap-2 w-full">
           {items.map((_, index) => (
             <motion.div
               key={index}
