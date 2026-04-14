@@ -1,96 +1,16 @@
-import './App.css'
-import Silk from '@/components/Silk'
-import BubbleMenu from '@/components/BubbleMenu'
-import TextType from '@/components/TextType';
-import Carousel from '@/components/Carousel'
-
-const items = [
-  {
-    label: 'home',
-    href: '#',
-    ariaLabel: 'Home',
-    rotation: -8,
-    hoverStyles: { bgColor: '#3b82f6', textColor: '#ffffff' }
-  },
-  {
-    label: 'about',
-    href: '#',
-    ariaLabel: 'About',
-    rotation: 8,
-    hoverStyles: { bgColor: '#10b981', textColor: '#ffffff' }
-  },
-  {
-    label: 'projects',
-    href: '#',
-    ariaLabel: 'Projects',
-    rotation: 8,
-    hoverStyles: { bgColor: '#f59e0b', textColor: '#ffffff' }
-  },
-  {
-    label: 'blog',
-    href: '#',
-    ariaLabel: 'Blog',
-    rotation: 8,
-    hoverStyles: { bgColor: '#ef4444', textColor: '#ffffff' }
-  },
-  {
-    label: 'contact',
-    href: '#',
-    ariaLabel: 'Contact',
-    rotation: -8,
-    hoverStyles: { bgColor: '#8b5cf6', textColor: '#ffffff' }
-  }
-];
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+/* import Blog from "./pages/Blog"; // تأكد إنك أنشأت هاد الملف ولو فاضي حالياً */
 
 function App() {
   return (
-    <>
-      <div className="fixed w-full h-screen overflow-hidden backdrop-blur-3xl">
-        <Silk
-          speed={5}
-          scale={1}
-          color="#0a0f9e"
-          noiseIntensity={0.8}
-          rotation={4.3}
-        />
-        <div className="absolute inset-0 backdrop-blur-lg bg-black/20 z-5" />
-      </div>
-      <div className='absolute w-full flex flex-col py-25 justify-center text-center'>
-        <TextType
-          text={["Full-stack developer", "AI power-user", "Linux enthusiast"]}
-          typingSpeed={75}
-          pauseDuration={1500}
-          showCursor
-          cursorCharacter="▎"
-          cursorBlinkDuration={0.5}
-          className='text-[50px]'
-        />
-        <div className='flex items-center justify-center'>
-          <Carousel
-            baseWidth={700}
-            autoplay={false}
-            autoplayDelay={3000}
-            pauseOnHover={false}
-            loop={true}
-            round={false}
-          />
-        </div>
-      </div>
-      <div className='absolute flex flex-col gap-4 w-full z-90'>
-        <BubbleMenu
-          logo={<span style={{ fontSize: "14px", fontWeight: 700, color: "#101010" }}>Adnan Roomieh</span>}
-          items={items}
-          menuAriaLabel="Toggle navigation"
-          menuBg="#cdcdcd"
-          menuContentColor="#101010"
-          useFixedPosition={true}
-          animationEase="back.out(1.5)"
-          animationDuration={0.5}
-          staggerDelay={0.12}
-        />
-      </div>
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/*  <Route path="/blog" element={<Blog />} /> */}
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
