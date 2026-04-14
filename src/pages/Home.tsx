@@ -3,44 +3,7 @@ import Silk from '@/components/Silk'
 import BubbleMenu from '@/components/BubbleMenu'
 import TextType from '@/components/TextType';
 import Carousel from '@/components/Carousel'
-
-const items = [
-  {
-    label: 'home',
-    href: '#',
-    ariaLabel: 'Home',
-    rotation: -8,
-    hoverStyles: { bgColor: '#3b82f6', textColor: '#ffffff' }
-  },
-  {
-    label: 'about',
-    href: '#',
-    ariaLabel: 'About',
-    rotation: 8,
-    hoverStyles: { bgColor: '#10b981', textColor: '#ffffff' }
-  },
-  {
-    label: 'projects',
-    href: '#',
-    ariaLabel: 'Projects',
-    rotation: 8,
-    hoverStyles: { bgColor: '#f59e0b', textColor: '#ffffff' }
-  },
-  {
-    label: 'blog',
-    href: '#',
-    ariaLabel: 'Blog',
-    rotation: 8,
-    hoverStyles: { bgColor: '#ef4444', textColor: '#ffffff' }
-  },
-  {
-    label: 'contact',
-    href: '#',
-    ariaLabel: 'Contact',
-    rotation: -8,
-    hoverStyles: { bgColor: '#8b5cf6', textColor: '#ffffff' }
-  }
-];
+import { BubbleItems } from '@/constants/Bubbleitems';
 
 function Home() {
   return (
@@ -49,7 +12,7 @@ function Home() {
         <Silk
           speed={5}
           scale={1}
-          color="#0a0f9e"
+          color="#3b82f6"
           noiseIntensity={0.8}
           rotation={4.3}
         />
@@ -58,7 +21,7 @@ function Home() {
       <div className='absolute w-full flex flex-col py-25 justify-center text-center'>
         <TextType
           text={["Full-stack developer", "AI power-user", "Linux enthusiast"]}
-          typingSpeed={75}
+          typingSpeed={150}
           pauseDuration={1500}
           showCursor
           cursorCharacter="▎"
@@ -79,7 +42,7 @@ function Home() {
       <div className='absolute flex flex-col gap-4 w-full z-90'>
         <BubbleMenu
           logo={<span style={{ fontSize: "14px", fontWeight: 700, color: "#101010" }}>Adnan Roomieh</span>}
-          items={items}
+          items={BubbleItems}
           menuAriaLabel="Toggle navigation"
           menuBg="#cdcdcd"
           menuContentColor="#101010"
