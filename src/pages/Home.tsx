@@ -31,9 +31,9 @@ function Home() {
         <div className='flex items-center justify-center'>
           <Carousel
             baseWidth={700}
-            autoplay={false}
+            autoplay={true}
             autoplayDelay={3000}
-            pauseOnHover={false}
+            pauseOnHover={true}
             loop={true}
             round={false}
           />
@@ -48,7 +48,7 @@ function Home() {
           menuContentColor="#101010"
           useFixedPosition={true}
           animationEase="back.out(1.5)"
-          animationDuration={0.5}
+          animationDuration={0.8}
           staggerDelay={0.12}
         />
       </div>
