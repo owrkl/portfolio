@@ -1,3 +1,4 @@
+import './Pages.css'
 import Silk from "@/components/Silk";
 import BubbleMenu from "@/components/BubbleMenu";
 import { BubbleItems } from "@/constants/Bubbleitems";

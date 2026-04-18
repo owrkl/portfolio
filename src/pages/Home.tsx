@@ -1,4 +1,4 @@
-import './Home.css'
+import './Pages.css'
 import Silk from '@/components/Silk'
 import BubbleMenu from '@/components/BubbleMenu'
 import TextType from '@/components/TextType';
